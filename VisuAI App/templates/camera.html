@@ -1,0 +1,120 @@
+<!-- 
+Author: Andy Yang
+Date: 2024-10-11 (updated 2026-10)
+Project: VisuAI Front-End
+Description: Camera page: live annotated feed plus a live text panel of what VisuAI sees,
+announced to screen readers through aria-live.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisuAI - Live Camera</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/camera.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='JS/camera.js') }}"
+    ></script>
+    <style>
+      .status-panel {
+        max-width: 900px;
+        margin: 1.5rem auto;
+        padding: 1rem 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.35);
+        color: #fff;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .status-panel h3 {
+        margin: 0 0 0.5rem;
+      }
+      .status-panel ul {
+        margin: 0.5rem 0 0;
+        padding-left: 1.25rem;
+      }
+      .status-meta {
+        opacity: 0.7;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+      .status-error {
+        color: #ff8a8a;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="glow-img-container">
+        <img
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="VisuAI logo"
+          class="glow-img"
+        />
+      </div>
+      <h1 class="glow-title">VisuAI - Object Detection AI</h1>
+      <p class="subtitle typing typing1">
+        Believe in the power of change and start your journey with us.
+      </p>
+      <a href="{{ url_for('index') }}" class="cta-button">Return Home</a>
+    </header>
+
+    <div class="video-title">
+      <h2>Live Camera Feed</h2>
+    </div>
+
+    <div class="video-instruction-container">
+      <div class="video-container">
+        <img
+          src="{{ url_for('video_feed') }}"
+          alt="Live camera feed with detected objects outlined"
+          class="video-feed"
+        />
+      </div>
+
+      <div class="instruction-button-container">
+        <a href="{{ url_for('index') }}#intro" class="instruction-button"
+          >View Instructions</a
+        >
+      </div>
+    </div>
+
+    <section class="status-panel" aria-label="What VisuAI sees">
+      <h3>What VisuAI sees</h3>
+      <p id="error" class="status-error" role="alert" hidden></p>
+      <p id="description" aria-live="polite">Starting up...</p>
+      <ul id="objects"></ul>
+      <p id="stats" class="status-meta"></p>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          class="footer-link"
+        >
+          <img
+            src="{{ url_for('static', filename='images/github.png') }}"
+            alt="GitHub Logo"
+            class="footer-icon"
+          />
+          GitHub
+        </a>
+        <div class="attribution">
+          <a href="https://www.freepik.com/"
+            >Title Background Designed by Kotkoa / Freepik</a
+          >
+        </div>
+        <p class="copyright">© 2024 VisuAI. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

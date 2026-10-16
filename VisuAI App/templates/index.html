@@ -1,0 +1,520 @@
+<!-- 
+Author: Andy Yang
+Date: 2024-10-11 (updated 2026-10)
+Project: VisuAI Front-End
+Description: Created the Visuals and Details of VisuAI Home Page with Flask, HTML, CSS, and JavaScript
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisuAI - Object Detection AI</title>
+    <link rel="stylesheet" href="static/CSS/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="glow-img-container">
+        <img
+          src="static/images/logo.png"
+          alt="Glowing Light Image"
+          class="glow-img"
+        />
+      </div>
+      <h1 class="glow-title">VisuAI - Object Detection AI</h1>
+      <p class="subtitle typing typing1">
+        Bringing the world closer for visually impaired users with real-time AI
+        assistance.
+      </p>
+      <a href="{{ url_for('camera_page') }}" class="cta-button"
+        >Get Started Today</a
+      >
+    </header>
+
+    <section class="impact">
+      <video autoplay muted loop class="background-video">
+        <source src="static/images/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content-container">
+        <h2 class="section-title">Our Impact</h2>
+        <p class="section-subtitle typing typing2">
+          We strive to create a meaningful difference in the world.
+        </p>
+
+        <div class="impact-items">
+          <div class="impact-item item-1">
+            <div class="glow-container">
+              <div class="glow-effect"></div>
+              <img
+                src="static/images/impact1.webp"
+                alt="Sustainability Icon"
+                class="impact-icon"
+              />
+            </div>
+            <h3>Enhancing Accessibility for the Visually Impaired:</h3>
+            <p>
+              VisuAI enables instant, real-time access to surroundings using
+              advanced AI-driven object detection and scene analysis for 285
+              million visually impaired individuals worldwide, 39 million of
+              whom are completely blind. It provides critical information about
+              the location, size, color, and estimated distance of objects that
+              would help them move around with confidence in the environment and
+              also gain more independence in their daily activities.
+            </p>
+          </div>
+
+          <div class="impact-item item-2">
+            <div class="glow-container">
+              <div class="glow-effect"></div>
+              <img
+                src="static/images/impact2.webp"
+                alt="Community Icon"
+                class="impact-icon"
+              />
+            </div>
+            <h3>Improving Personal Safety Through Real-Time Awareness</h3>
+            <p>
+              Over 1.3 billion people live with some form of visual impairment
+              that makes it difficult to detect potential hazards. Using
+              real-time object recognition with YOLOv10, VisuAI watches for
+              vehicles such as cars, bicycles, and buses in the user's path and
+              immediately speaks a warning when one is close or approaching,
+              reducing the chance of injury.
+            </p>
+          </div>
+
+          <div class="impact-item item-3">
+            <div class="glow-container">
+              <div class="glow-effect"></div>
+              <img
+                src="static/images/impact3.webp"
+                alt="Innovation Icon"
+                class="impact-icon"
+              />
+            </div>
+            <h3>
+              Fostering Autonomy with Personalized, Contextual Descriptions:
+            </h3>
+            <p>
+              Research evidence shows that, with the use of assistive
+              technology, there is a possibility of enhancing the quality of
+              life of persons with a disability by up to 50%. The AI-driven
+              scene analysis by VisuAI generates customized audio descriptions,
+              thus enabling users to develop a deeper understanding of the world
+              around them. By summarizing specific details, such as where a
+              crosswalk is, the location of a bus stop, or what the room's
+              configuration looks like, VisuAI allows users to make independent
+              decisions based on comprehensive, personalized descriptions of
+              their surroundings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="purpose">
+      <video autoplay muted loop class="background-video">
+        <source src="static/images/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content-container">
+        <h2 class="section-title">Our Purpose</h2>
+        <p class="section-subtitle typing typing3">
+          Guided by a vision of a better, more connected world.
+        </p>
+
+        <div class="impact-items">
+          <div class="purpose-item item-1">
+            <div class="glow-container">
+              <div class="glow-effect"></div>
+              <img
+                src="static/images/purpose1.webp"
+                alt="Vision Icon"
+                class="impact-icon"
+              />
+            </div>
+            <h3>
+              To Bridge the Gap Between Visual Impairment and Daily
+              Functionality
+            </h3>
+            <p>
+              75% of the blind population of the world lives in low-income
+              settings where accessibility is a huge concern. VisuAI will
+              provide affordable, AI-powered assistance to this underserved
+              group in experiencing their surroundings with clarity and enable
+              them to navigate more complex environments with ease.
+            </p>
+          </div>
+
+          <div class="purpose-item item-2">
+            <div class="glow-container">
+              <div class="glow-effect"></div>
+              <img
+                src="static/images/purpose2.jpg"
+                alt="Values Icon"
+                class="impact-icon"
+              />
+            </div>
+            <h3>
+              To Leverage Cutting-Edge AI for Practical, Real-World Assistance
+            </h3>
+            <p>
+              The last few years have witnessed the unparalleled viability and
+              approachability of AI-driven technologies, from real-time object
+              detection to others. VisuAI combines YOLOv10 object detection with
+              Gemini vision and GPT language models for a fully active
+              experience tailored to the needs of the visually impaired, making
+              daily life easier by integrating AI into it.
+            </p>
+          </div>
+
+          <div class="purpose-item item-3">
+            <div class="glow-container">
+              <div class="glow-effect"></div>
+              <img
+                src="static/images/purpose3.webp"
+                alt="Future Icon"
+                class="impact-icon"
+              />
+            </div>
+            <h3>
+              To Promote Greater Independence Through Technology-Driven Support
+            </h3>
+            <p>
+              The World Health Organization estimates that 80% of all visual
+              impairments are preventable or treatable. VisuAI, by providing aid
+              that allows users to act independently within an environment, is
+              taking head-on some of the challenges posed by visual impairment
+              and fostering independence and less reliance on external
+              assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <video autoplay muted loop class="steps-background-video">
+        <source src="static/images/steps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content-container-steps">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div id="step1" class="step">
+            <img src="static/images/step1.webp" alt="Capture Image" />
+            <p>Step 1: Capture Image</p>
+            <p>
+              The camera continuously captures the surroundings and feeds each
+              frame into OpenCV for real-time processing, preparing the image
+              for object detection and analysis.
+            </p>
+          </div>
+          <div class="right-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div id="step2" class="step">
+            <img src="static/images/step2.jpg" alt="Object Detection" />
+            <p>Step 2: Object Detection</p>
+            <p>
+              YOLOv10 detects and categorizes the objects within the image,
+              along with coordinates for bounding boxes and confidence scores.
+              These results are used to calculate each object's direction,
+              estimated distance, size, and color, and to warn about approaching
+              vehicles.
+            </p>
+          </div>
+          <div class="down-arrow"><i class="fas fa-arrow-down"></i></div>
+          <div id="step3" class="step">
+            <img src="static/images/step3.png" alt="Scene Analysis" />
+            <p>Step 3: Scene Analysis</p>
+            <p>
+              Gemini describes the scene from the camera image, and GPT combines
+              those descriptions with the detection results into a short summary
+              focused on what matters most, starting with anything
+              safety-related.
+            </p>
+          </div>
+          <div class="left-arrow"><i class="fas fa-arrow-left"></i></div>
+          <div id="step4" class="step">
+            <img src="static/images/step4.png" alt="Audio Feedback" />
+            <p>Step 4: Audio Feedback</p>
+            <p>
+              Using pyttsx3 text-to-speech, visual information is converted into
+              spoken audio. Hazard warnings are always spoken first, followed by
+              answers to the user's questions and regular scene updates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <h2 class="section-title">About Us</h2>
+      <div class="team">
+        <div class="member">
+          <img src="static/images/andy.png" alt="Team Member 1" />
+          <h3>Andy Yang</h3>
+          <h4 class="role"></h4>
+          <p>
+            Andy is a full-stack developer who pays much attention to
+            user-friendly application development. He contributed by writing the
+            base code of VisuAI, building object detection and AI, and designing
+            the app's CSS.
+          </p>
+        </div>
+        <div class="member">
+          <img src="static/images/aarav.png" alt="Team Member 2" />
+          <h3>Aarav Chokshi</h3>
+          <p>
+            Aarav brought in further tuning of VisuAI for performance, refining
+            the AI, and making it further responsive and accurate. His
+            improvements have made the program a lot stronger and more effective
+            for the users.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="instructions-wrapper">
+      <video
+        id="background-video"
+        autoplay
+        muted
+        loop
+        class="background-video-instructions"
+      >
+        <source src="static/images/instructions.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="instructions">
+        <h2 class="main-title">Instructions for VisuAI</h2>
+        <div class="section" id="intro">
+          <h3>Introduction</h3>
+          <p>
+            VisuAI helps visually impaired users understand what is happening
+            around them using object detection, scene description, and voice
+            recognition. It describes your surroundings, answers your questions,
+            warns you about approaching vehicles, and can alert an emergency
+            contact.
+          </p>
+        </div>
+        <div class="section" id="getting-started">
+          <h3>Getting Started</h3>
+          <div class="sub-section-container">
+            <div class="sub-section" id="open-app">
+              <h4>Open the Application:</h4>
+              <p>Launch the VisuAI application on your device.</p>
+            </div>
+            <div class="arrow-right" id="arrow1">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="sub-section" id="access-camera">
+              <h4>Access the Camera:</h4>
+              <p>
+                The application will open the camera interface, enabling you to
+                capture real-time images.
+              </p>
+            </div>
+            <div class="arrow-right" id="arrow2">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="sub-section" id="wake-word">
+              <h4>Wake Word Activation:</h4>
+              <p>
+                To activate the assistant, say the wake word, "Hey Vision,"
+                followed by your request, or pause after "Hey Vision" and VisuAI
+                will say "I'm listening." Ensure the microphone is enabled and
+                working for optimal recognition.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-down" id="arrow-down1">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+
+        <div class="section" id="using-object-detection">
+          <h3>Using Object Detection</h3>
+          <div class="sub-section-container">
+            <div class="sub-section" id="capture-image">
+              <h4>Capture an Image:</h4>
+              <p>
+                Point the camera at the object or scene you want to analyze. The
+                application automatically detects objects within the camera’s
+                view.
+              </p>
+            </div>
+            <div class="arrow-right" id="arrow3">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="sub-section" id="get-object-info">
+              <h4>Get Object Information:</h4>
+              <p>
+                Once an object is detected, VisuAI will provide information
+                about it, including:
+              </p>
+              <ul>
+                <li>The object's name (e.g., "person," "car," "chair").</li>
+                <li>
+                  Its direction as a clock position (e.g., "12 o'clock" is
+                  straight ahead).
+                </li>
+                <li>Its size and color (e.g., "large blue").</li>
+                <li>
+                  Its estimated distance from you (e.g., "about 3 meters away").
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-down" id="arrow-down2">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+
+        <div class="section" id="asking-questions">
+          <h3>Asking Questions</h3>
+          <div class="sub-section-container">
+            <div class="sub-section" id="voice-commands">
+              <h4>Voice Commands:</h4>
+              <p>
+                Ask questions regarding the detected objects or the scene.
+                Example questions include:
+              </p>
+              <ul>
+                <li>"Hey Vision, what do you see?"</li>
+                <li>"Hey Vision, is there a door in front of me?"</li>
+                <li>"Hey Vision, are there any people around?"</li>
+              </ul>
+            </div>
+            <div class="arrow-right" id="arrow4">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="sub-section" id="find-objects">
+              <h4>Find Specific Objects:</h4>
+              <p>
+                Say "Hey Vision, find [object name]" (e.g., "find my phone") to
+                locate specific items. The assistant will tell you the object's
+                direction, estimated distance, and characteristics.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-down" id="arrow-down3">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+
+        <div class="section" id="receiving-descriptions">
+          <h3>Receiving Descriptions</h3>
+          <div class="sub-section-container">
+            <div class="sub-section" id="scene-description">
+              <h4>Scene Description:</h4>
+              <p>
+                About once a minute, the assistant gives a short spoken summary
+                of your surroundings, mentioning anything safety-related first
+                and focusing on what has changed.
+              </p>
+            </div>
+            <div class="arrow-right" id="arrow5">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="sub-section" id="emergency-situations">
+              <h4>Emergency Situations:</h4>
+              <p>
+                In an emergency, say "Hey Vision, help." VisuAI will email your
+                emergency contact with your location and a camera snapshot. You
+                have 10 seconds to say "cancel" if it was a mistake. If you are
+                in danger, also call 911.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-down" id="arrow-down4">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+
+        <div class="section" id="additional-features">
+          <h3>Additional Features</h3>
+          <div class="sub-section-container">
+            <div class="sub-section" id="voice-feedback">
+              <h4>Voice Feedback:</h4>
+              <p>
+                VisuAI utilizes text-to-speech technology to read out
+                descriptions and instructions, ensuring you stay informed.
+              </p>
+            </div>
+            <div class="arrow-right" id="arrow6">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="sub-section" id="hazard-alerts">
+              <h4>Hazard Alerts:</h4>
+              <p>
+                VisuAI watches for cars, bicycles, buses, and other vehicles in
+                your path and immediately warns you when one is close or
+                approaching.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="troubleshooting">
+          <h3>Troubleshooting</h3>
+          <ul>
+            <li>
+              <strong>Microphone Issues:</strong> Ensure your device's
+              microphone is not muted and is working correctly.
+            </li>
+            <li>
+              <strong>Object Detection Failures:</strong> If the application
+              fails to recognize objects, adjust the camera angle or distance,
+              or improve the lighting.
+            </li>
+            <li>
+              <strong>Wake Word Not Responding:</strong> Make sure the
+              environment is not too noisy, which may interfere with the voice
+              recognition. VisuAI ignores speech while it is talking, so wait
+              until it finishes.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          class="footer-link"
+        >
+          <img
+            src="static/images/github.png"
+            alt="GitHub Logo"
+            class="footer-icon"
+          />
+          GitHub
+        </a>
+
+        <div class="attribution">
+          <a href="https://www.freepik.com/"
+            >All Background Videos and Images Designed by Kotkoa / Freepik</a
+          >
+        </div>
+        <p class="copyright">© 2024 VisuAI. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="static/JS/index.js"></script>
+  </body>
+</html>

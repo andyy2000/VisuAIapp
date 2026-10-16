@@ -1,0 +1,186 @@
+/*
+Author: Andy Yang
+Project: VisuAI Front End
+Description: Camera page styles
+*/
+
+:root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #2a313c;
+    --text: #e6e9ef;
+    --muted: #9aa4b2;
+    --accent: #8fa8ff;
+    --error: #ff8a8a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.glow-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.glow-title {
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin: 6px 0 20px;
+}
+
+.cta-button {
+    padding: 8px 18px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+}
+
+.cta-button:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+/* ---------- Video ---------- */
+
+.video-title h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 32px 0 16px;
+}
+
+.video-instruction-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-container {
+    background: #000;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-feed {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.instruction-button-container {
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* ---------- What VisuAI sees ---------- */
+
+.status-panel {
+    max-width: 920px;
+    margin: 24px auto 48px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.status-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.status-panel ul {
+    color: var(--muted);
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.status-meta {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.status-error {
+    color: var(--error);
+    font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    padding: 32px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.attribution a {
+    color: var(--muted);
+}
+
+@media (max-width: 760px) {
+    .status-panel {
+        margin: 24px 20px 48px;
+    }
+}
